@@ -8,12 +8,15 @@ def create_table(root, fields, data):
     # Crear el árbol (Treeview)
     tree = ttk.Treeview(root, columns=fields, show="headings")
     # Definir configuraciones de estilo
+    ttk.Style().configure("TButton", padding=6, relief="flat", background="#ccc")
+    
+    tree.tag_configure("heading", background="red", foreground="black",font=('calibri', 13, 'bold'))
     tree.tag_configure("oddrow", background="lightblue")
     tree.tag_configure("evenrow", background="white", foreground="blue")
     # Configurar las columnas
     for field in fields:
-        tree.heading(field, text=field)
-        tree.column(field, width=100)
+        tree.heading(field, text=field,anchor=tk.CENTER)
+        tree.column(field, width=100,anchor=tk.CENTER)
     
     # Insertar los datos en la tabla
     for row in data:
