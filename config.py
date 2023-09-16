@@ -4,6 +4,7 @@ class Config:
         self.size = "1000x800"
         self.title = "Generador de Numeros Pseudoaleatorios"
         self.fields = ["n","x0","x00","x0*x00","largo","centro","ri"]
+        self.fields_cm = ["n","x0","x0^2","largo","centro","ri"]
         self.data = [
                 (0,0,0,0,0,0,0)
             ]
