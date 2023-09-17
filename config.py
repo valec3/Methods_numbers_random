@@ -1,7 +1,7 @@
 from tkinter import ttk
 class Config:
     def __init__(self):
-        self.size = "1000x800"
+        self.size = (1200, 800)
         self.title = "Generador de Numeros Pseudoaleatorios"
         self.fields = ["n","x0","x00","x0*x00","largo","centro","ri"]
         self.fields_cm = ["n","x0","x0^2","largo","centro","ri"]
